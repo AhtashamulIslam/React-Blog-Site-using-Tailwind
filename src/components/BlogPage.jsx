@@ -13,7 +13,7 @@ const BlogPage = () => {
 
    useEffect(()=>{
        async function fetchBlogs(){
-          let url=`http://localhost:5000/blogs?page=${currentPage}?&limit=${blogNumber}`
+          let url=`https://blog-server-side-ten.vercel.app/blogs?page=${currentPage}?&limit=${blogNumber}`
           //Filter by Category
           if(selectedCategory){
             url+=`&category=${selectedCategory}`
