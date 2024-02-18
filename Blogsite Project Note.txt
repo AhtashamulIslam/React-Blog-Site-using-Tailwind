@@ -1,0 +1,21 @@
+
+*******************************  ROUTING  WITH   createBrowserRouter , RouterProvider  IN  MAIN.JSX :::::  
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+const router=createBrowserRouter([{
+     path:'/',
+     element:<App />,     [  IT IS  AN  ARRAY  OF  OBJECT  OF  PATH ,  ELEMENT  and CHILDREN  WHICH WILL  BE 
+     children:[{                    Rendered  Under the  App  Element ]
+      path:'/',
+      
+     }]
+}])
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />  [  Now  The  Component  Variable is given to  PROVIDER  AS  PROPS ]
+  </React.StrictMode>,
+)
