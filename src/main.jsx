@@ -36,7 +36,7 @@ const router=createBrowserRouter([{
       //This is for single Blog Post Rendering 
       path:'/blogs/:id',
       element:<SingleBlog />,
-      loader:({params})=>fetch(`http://localhost:5000/blogs/${params.id}`)
+      loader:({params})=>fetch(`https://blog-server-side-ten.vercel.app/blogs/${params.id}`)
      }
     ]
 }])
